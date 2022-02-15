@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "WUni4Y2fjcgMZSzZvFH4mQ4IBVDuP5ATu3lpnqY08JP8B9PxaIVSBEC4+Lc/07tI+8qjtgg3ng1t7+tNXIfllA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mirko.MIRKO\\source\\repos\\EcommerceMVC\\EcommerceMVC\\EcommerceMVC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mirko.MIRKO\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.13\\microsoft.visualstudio.azure.containers.tools.targets.1.10.13.nupkg.sha512"
+  ],
+  "logs": []
+}
