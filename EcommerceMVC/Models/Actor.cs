@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace EcommerceMVC.Models
 {
@@ -9,5 +10,8 @@ namespace EcommerceMVC.Models
         public string Profile { get; set; }
         public string FullName { get; set; }
         public string Bio { get; set; }
+
+        //relationship
+        public List<Actor_Movie> Actors_Movies { get; set; }
     }
 }
