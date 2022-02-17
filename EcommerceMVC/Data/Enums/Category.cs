@@ -11,6 +11,7 @@ namespace EcommerceMVC.Data
         Comedy = 2,
         Drama = 3,
         Horror = 4,
-        Documentary = 5
+        Documentary = 5,
+        Cartoon = 6
     }
 }
