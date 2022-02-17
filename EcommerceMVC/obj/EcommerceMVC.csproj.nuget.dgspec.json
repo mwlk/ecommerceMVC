@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mirko.MIRKO\\source\\repos\\EcommerceMVC\\EcommerceMVC\\EcommerceMVC.csproj": {}
+    "C:\\Users\\mirko.MIRKO\\source\\repos\\ecommerceMVC\\EcommerceMVC\\EcommerceMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mirko.MIRKO\\source\\repos\\EcommerceMVC\\EcommerceMVC\\EcommerceMVC.csproj": {
+    "C:\\Users\\mirko.MIRKO\\source\\repos\\ecommerceMVC\\EcommerceMVC\\EcommerceMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mirko.MIRKO\\source\\repos\\EcommerceMVC\\EcommerceMVC\\EcommerceMVC.csproj",
+        "projectUniqueName": "C:\\Users\\mirko.MIRKO\\source\\repos\\ecommerceMVC\\EcommerceMVC\\EcommerceMVC.csproj",
         "projectName": "EcommerceMVC",
-        "projectPath": "C:\\Users\\mirko.MIRKO\\source\\repos\\EcommerceMVC\\EcommerceMVC\\EcommerceMVC.csproj",
+        "projectPath": "C:\\Users\\mirko.MIRKO\\source\\repos\\ecommerceMVC\\EcommerceMVC\\EcommerceMVC.csproj",
         "packagesPath": "C:\\Users\\mirko.MIRKO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mirko.MIRKO\\source\\repos\\EcommerceMVC\\EcommerceMVC\\obj\\",
+        "outputPath": "C:\\Users\\mirko.MIRKO\\source\\repos\\ecommerceMVC\\EcommerceMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,6 +43,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.14, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.10.13, )"
@@ -66,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }
