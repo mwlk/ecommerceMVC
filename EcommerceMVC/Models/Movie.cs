@@ -10,12 +10,19 @@ namespace EcommerceMVC.Models
     {
         [Key]
         public int MovieId { get; set; }
+        [Display(Name = "Title")]
         public string Title { get; set; }
+        [Display(Name = "Description")]
         public string Description { get; set; }
+        [Display(Name = "Price")]
         public double Price { get; set; }
+        [Display(Name = "Image")]
         public string ImageURL { get; set; }
+        [Display(Name = "Start")]
         public DateTime StartDate { get; set; }
+        [Display(Name = "End")]
         public DateTime EndDate { get; set; }
+        //[Display(Name = "Category")]
         public MovieCategory Category { get; set; }
 
         //relationship
