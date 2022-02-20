@@ -72,3 +72,4 @@ C:\Users\mirko.MIRKO\source\repos\ecommerceMVC\EcommerceMVC\bin\Debug\net5.0\Hum
 C:\Users\mirko.MIRKO\source\repos\ecommerceMVC\EcommerceMVC\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\mirko.MIRKO\source\repos\ecommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Actors\Index.cshtml.g.cs
 C:\Users\mirko.MIRKO\source\repos\ecommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Producers\Index.cshtml.g.cs
+C:\Users\mirko.MIRKO\source\repos\ecommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Cinemas\Index.cshtml.g.cs

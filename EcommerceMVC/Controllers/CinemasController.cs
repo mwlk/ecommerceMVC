@@ -18,7 +18,7 @@ namespace EcommerceMVC.Controllers
         {
             var cinemas = await _context.Cinemas.ToListAsync();
 
-            return View();
+            return View(cinemas);
         }
     }
 }
