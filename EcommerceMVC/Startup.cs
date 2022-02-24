@@ -1,4 +1,5 @@
 using EcommerceMVC.Data;
+using EcommerceMVC.Data.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,11 @@ namespace EcommerceMVC
         {
             // dbcontext config
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
+
+            // configure services
+            services.AddScoped<IActorService, ActorService>();
+
+
             services.AddControllersWithViews();
         }
 

@@ -1,4 +1,5 @@
 ﻿using EcommerceMVC.Data;
+using EcommerceMVC.Data.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
@@ -8,16 +9,16 @@ namespace EcommerceMVC.Controllers
 {
     public class ActorsController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly IActorService _service;
 
-        public ActorsController(AppDbContext context)
+        public ActorsController(IActorService service)
         {
-            _context = context;
+            _service = service;
         }
 
         public async Task<IActionResult> Index()
         {
-            var data = await _context.Actors.ToListAsync();
+            var data = await _service.GetAll();
 
             return View(data);
         }
