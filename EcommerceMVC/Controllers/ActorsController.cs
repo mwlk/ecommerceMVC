@@ -19,7 +19,7 @@ namespace EcommerceMVC.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var data = await _service.GetAll();
+            var data = await _service.GetAllAsync();
 
             return View(data);
         }
@@ -37,9 +37,19 @@ namespace EcommerceMVC.Controllers
                 return View(model);
             }
 
-            _service.Add(model);
+            await _service.AddAsync(model);
 
             return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Detail(int id)
+        {
+            var detail = await _service.GetByIdAsync(id);
+
+            if(detail == null) return View("Empty");
+
+            return View(detail);
+            
         }
     }
 }

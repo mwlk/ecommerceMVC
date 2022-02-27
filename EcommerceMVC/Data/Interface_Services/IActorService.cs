@@ -6,14 +6,14 @@ namespace EcommerceMVC.Data.Services
 {
     public interface IActorService
     {
-        Task<IEnumerable<Actor>> GetAll();
+        Task<IEnumerable<Actor>> GetAllAsync();
 
-        Actor GetById(int id);
+        Task<Actor> GetByIdAsync(int id);
 
-        void Add(Actor actor);
+        Task AddAsync(Actor actor);
 
-        Actor Upddate(int id, Actor model);
+        Actor UpdateAsync(int id, Actor model);
 
-        bool Delete(int id);
+        bool DeleteAsync(int id);
     }
 }

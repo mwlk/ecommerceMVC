@@ -37,7 +37,6 @@ C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\ref
 C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\EcommerceMVC.pdb
 C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\EcommerceMVC.genruntimeconfig.cache
 C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\EcommerceMVC.csproj.CopyComplete
-C:\Users\mirko.MIRKO\source\repos\ecommerceMVC\EcommerceMVC\obj\Debug\net5.0\EcommerceMVC.csproj.AssemblyReference.cache
 C:\Users\mirko.MIRKO\source\repos\ecommerceMVC\EcommerceMVC\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
 C:\Users\mirko.MIRKO\source\repos\ecommerceMVC\EcommerceMVC\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\mirko.MIRKO\source\repos\ecommerceMVC\EcommerceMVC\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -75,3 +74,5 @@ C:\Users\mirko.MIRKO\source\repos\ecommerceMVC\EcommerceMVC\obj\Debug\net5.0\Raz
 C:\Users\mirko.MIRKO\source\repos\ecommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Cinemas\Index.cshtml.g.cs
 C:\Users\mirko.MIRKO\source\repos\ecommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Movies\Index.cshtml.g.cs
 C:\Users\mirko.MIRKO\source\repos\ecommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Actors\Create.cshtml.g.cs
+C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Actors\Detail.cshtml.g.cs
+C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\EcommerceMVC.csproj.AssemblyReference.cache
