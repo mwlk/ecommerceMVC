@@ -18,7 +18,9 @@ namespace EcommerceMVC.Data.Services
 
         public void Add(Actor actor)
         {
-            throw new System.NotImplementedException();
+            _context.Actors.Add(actor);
+
+            _context.SaveChanges();
         }
 
         public bool Delete(int id)
