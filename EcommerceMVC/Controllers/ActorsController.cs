@@ -46,10 +46,33 @@ namespace EcommerceMVC.Controllers
         {
             var detail = await _service.GetByIdAsync(id);
 
-            if(detail == null) return View("Empty");
+            if(detail == null) return View("NotFound");
 
             return View(detail);
             
         }
+
+        public async Task<IActionResult> Edit(int id)
+        {
+            var detail = await _service.GetByIdAsync(id);
+
+            if (detail == null) return View("NotFound");
+
+            return View(detail);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, [Bind("Id, Profile, FullName, Bio")] Actor model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            await _service.UpdateAsync(id, model);
+
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }

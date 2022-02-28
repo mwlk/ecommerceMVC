@@ -6,7 +6,7 @@ namespace EcommerceMVC.Models
     public class Cinema
     {
         [Key]
-        public int CinemaId { get; set; }
+        public int Id { get; set; }
         [Display(Name = "Logo")]
         public string Logo { get; set; }
         [Display(Name = "Name")]

@@ -9,7 +9,7 @@ namespace EcommerceMVC.Models
     public class Movie
     {
         [Key]
-        public int MovieId { get; set; }
+        public int Id { get; set; }
         [Display(Name = "Title")]
         public string Title { get; set; }
         [Display(Name = "Description")]

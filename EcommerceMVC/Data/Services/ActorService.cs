@@ -37,14 +37,18 @@ namespace EcommerceMVC.Data.Services
 
         public async Task<Actor> GetByIdAsync(int id)
         {
-            var result = await _context.Actors.FirstOrDefaultAsync(x => x.ActorId == id);
+            var result = await _context.Actors.FirstOrDefaultAsync(x => x.Id == id);
 
             return result;
         }
 
-        public Actor UpdateAsync(int id, Actor model)
+        public async Task<Actor> UpdateAsync(int id, Actor model)
         {
-            throw new System.NotImplementedException();
+            _context.Update(model);
+
+            await _context.SaveChangesAsync();
+
+            return model;
         }
     }
 }

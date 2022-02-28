@@ -1,17 +1,17 @@
 ﻿@model Actor
 
 @{
-    ViewData["Title"] = "New Actor";
+    ViewData["Title"] = "Edit Actor";
 }
 
 <div class="row text">
     <div class="col-md-8 offset-2">
         <p>
-            <h1>Add New Actor</h1>
+            <h1>Edit Actor: @Model.FullName</h1>
         </p>
         <div class="row">
             <div class="col-md-8 offset-2">
-                <form asp-action="Create">
+                <form asp-action="Edit">
                     <div class="text-danger" asp-validation-summary="ModelOnly">
 
                     </div>
@@ -42,7 +42,7 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="submit" class="btn btn-outline-success float-right" value="Create" />
+                        <input type="submit" class="btn btn-outline-success float-right" value="Update" />
                         <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
                     </div>
                 </form>

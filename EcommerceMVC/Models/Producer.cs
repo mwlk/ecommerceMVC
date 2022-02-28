@@ -6,7 +6,7 @@ namespace EcommerceMVC.Models
     public class Producer
     {
         [Key]
-        public int ProducerId { get; set; }
+        public int Id { get; set; }
         [Display(Name = "Picture")]
         public string Profile { get; set; }
         [Display(Name = "Name")]

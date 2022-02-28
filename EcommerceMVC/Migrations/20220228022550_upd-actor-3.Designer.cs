@@ -4,14 +4,16 @@ using EcommerceMVC.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EcommerceMVC.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220228022550_upd-actor-3")]
+    partial class updactor3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -61,7 +63,7 @@ namespace EcommerceMVC.Migrations
 
             modelBuilder.Entity("EcommerceMVC.Models.Cinema", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("CinemaId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -75,14 +77,14 @@ namespace EcommerceMVC.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("CinemaId");
 
                     b.ToTable("Cinemas");
                 });
 
             modelBuilder.Entity("EcommerceMVC.Models.Movie", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("MovieId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -114,7 +116,7 @@ namespace EcommerceMVC.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("MovieId");
 
                     b.HasIndex("CinemaId");
 
@@ -125,7 +127,7 @@ namespace EcommerceMVC.Migrations
 
             modelBuilder.Entity("EcommerceMVC.Models.Producer", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ProducerId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -139,7 +141,7 @@ namespace EcommerceMVC.Migrations
                     b.Property<string>("Profile")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("ProducerId");
 
                     b.ToTable("Producers");
                 });

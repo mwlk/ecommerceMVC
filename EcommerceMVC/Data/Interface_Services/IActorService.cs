@@ -12,7 +12,7 @@ namespace EcommerceMVC.Data.Services
 
         Task AddAsync(Actor actor);
 
-        Actor UpdateAsync(int id, Actor model);
+        Task<Actor> UpdateAsync(int id, Actor model);
 
         bool DeleteAsync(int id);
     }
