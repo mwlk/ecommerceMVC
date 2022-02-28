@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using EcommerceMVC.Data.Base;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace EcommerceMVC.Models
 {
-    public class Actor
+    public class Actor: IEntityBase
     {
         [Key]
         public int Id { get; set; }
