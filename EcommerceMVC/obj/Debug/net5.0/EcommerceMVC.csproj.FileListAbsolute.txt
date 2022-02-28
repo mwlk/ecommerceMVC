@@ -78,3 +78,4 @@ C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\Raz
 C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Actors\Edit.cshtml.g.cs
 C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\EcommerceMVC.csproj.AssemblyReference.cache
 C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Actors\Delete.cshtml.g.cs
+C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Shared\NotFound.cshtml.g.cs
