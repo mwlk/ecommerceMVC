@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/cPYIY60OsEOhlL/tc0AxkG+ldhUu5Od36p/cudCufvsrWjtH/0Or4KvdYh+w29GMq0jx3c8DMt2B2S9c9Ijaw==",
+  "dgSpecHash": "EfLc7x1KDSFOQBIRFvTgh2oDU7d/souJdYM2vRFLujbspDcQvwdCfMw3g1BLnWceyVYsrLfkJn3UXRWHOjIe1A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mirko.MIRKO\\source\\repos\\ecommerceMVC\\EcommerceMVC\\EcommerceMVC.csproj",
+  "projectFilePath": "C:\\Users\\mirko.MIRKO\\source\\repos\\EcommerceMVC\\EcommerceMVC\\EcommerceMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mirko.MIRKO\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\mirko.MIRKO\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

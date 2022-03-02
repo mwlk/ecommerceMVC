@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using EcommerceMVC.Data.Base;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace EcommerceMVC.Models
 {
-    public class Cinema
+    public class Cinema: IEntityBase
     {
         [Key]
         public int Id { get; set; }
