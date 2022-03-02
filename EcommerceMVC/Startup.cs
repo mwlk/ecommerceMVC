@@ -1,4 +1,5 @@
 using EcommerceMVC.Data;
+using EcommerceMVC.Data.Interface_Services;
 using EcommerceMVC.Data.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,7 +32,7 @@ namespace EcommerceMVC
 
             // configure services
             services.AddScoped<IActorService, ActorService>();
-
+            services.AddScoped<IProducerService, ProducerService>();
 
             services.AddControllersWithViews();
         }
