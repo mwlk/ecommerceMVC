@@ -84,3 +84,5 @@ C:\Users\mirko.MIRKO\source\repos\ecommerceMVC\EcommerceMVC\obj\Debug\net5.0\Raz
 C:\Users\mirko.MIRKO\source\repos\ecommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Producers\Edit.cshtml.g.cs
 C:\Users\mirko.MIRKO\source\repos\ecommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Producers\Delete.cshtml.g.cs
 C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Cinemas\Create.cshtml.g.cs
+C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Cinemas\Detail.cshtml.g.cs
+C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Cinemas\Edit.cshtml.g.cs
