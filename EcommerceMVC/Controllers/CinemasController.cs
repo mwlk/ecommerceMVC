@@ -63,5 +63,27 @@ namespace EcommerceMVC.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            var cinema = await _service.GetByIdAsync(id);
+
+            if (cinema == null) return View("NotFound");
+
+            return View(cinema);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirm(int id)
+        {
+            var cinema = await _service.GetByIdAsync(id);
+
+            if (cinema == null) return View("NotFound");
+
+            await _service.DeleteAsync(id);
+
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
