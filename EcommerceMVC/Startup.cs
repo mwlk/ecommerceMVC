@@ -33,6 +33,7 @@ namespace EcommerceMVC
             // configure services
             services.AddScoped<IActorService, ActorService>();
             services.AddScoped<ICinemaService, CinemaService>();
+            services.AddScoped<IMovieService, MovieService>();
             services.AddScoped<IProducerService, ProducerService>();
 
             services.AddControllersWithViews();
