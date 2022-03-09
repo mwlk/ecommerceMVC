@@ -17,13 +17,13 @@
                     <div class="col-md-12">
                         <div class="card-header text-white bg-info">
                             <p class="card-text">
-                                <h5 class="card-title">
-                                    @item.Title
+                                <h3 class="card-title">
+                                    <span class="badge badge-dark text-white"> @item.Title</span>
                                     @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                                     {
                                         <a class="text-white float-right" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
                                     }
-                                </h5>
+                                </h3>
                             </p>
                         </div>
                     </div>

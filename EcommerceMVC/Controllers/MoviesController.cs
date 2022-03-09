@@ -1,4 +1,5 @@
 ﻿using EcommerceMVC.Data;
+using EcommerceMVC.Data.Interface_Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
@@ -8,19 +9,22 @@ namespace EcommerceMVC.Controllers
 {
     public class MoviesController : Controller
     {
-        private readonly AppDbContext _context;
 
-        public MoviesController(AppDbContext context)
+        private readonly IMovieService _service;
+
+        public MoviesController(IMovieService service)
         {
-            _context = context;
+            _service = service;
         }
 
         public async Task<IActionResult> Index()
         {
-            var movies = await _context.Movies
-                                .Include(c => c.Cinema)
-                                .OrderByDescending(m => m.StartDate).ThenByDescending(m => m.Price)
-                                .ToListAsync();
+            //var movies = await _context.Movies
+            //                    .Include(c => c.Cinema)
+            //                    .OrderByDescending(m => m.StartDate).ThenByDescending(m => m.Price)
+            //                    .ToListAsync();
+
+            var movies = await _service.GetAllAsync(m => m.Cinema);
 
             return View(movies);
         }
