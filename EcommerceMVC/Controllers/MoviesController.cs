@@ -28,5 +28,12 @@ namespace EcommerceMVC.Controllers
 
             return View(movies);
         }
+
+        public async Task<IActionResult> Detail(int id)
+        {
+            var detail = await _service.GetMovieById(id);
+
+            return View(detail);
+        }
     }
 }
