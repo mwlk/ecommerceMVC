@@ -91,3 +91,4 @@ C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\Eco
 C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Movies\Create.cshtml.g.cs
 C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Shared\_CreateItem.cshtml.g.cs
 C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Movies\Edit.cshtml.g.cs
+C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Orders\Index.cshtml.g.cs
