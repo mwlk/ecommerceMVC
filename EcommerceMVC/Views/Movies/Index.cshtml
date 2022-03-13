@@ -8,7 +8,11 @@
 }
 
 @*write code*@
+
 <div class="row">
+
+    @await Html.PartialAsync("_CreateItem", "Movies")
+
     @foreach (var item in Model)
     {
         <div class="col-md-4 col-xs-6 border-primary mb-3">
