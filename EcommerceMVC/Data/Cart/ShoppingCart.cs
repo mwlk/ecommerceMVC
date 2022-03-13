@@ -41,6 +41,27 @@ namespace EcommerceMVC.Data.Cart
             await _context.SaveChangesAsync();
         }
 
+        public async void RemoveItemToCart(Movie item)
+        {
+            var cartItem = _context.ShoppingCartItems.FirstOrDefault(i => i.Movie.Id == item.Id
+                                                                    && i.ShoppingCartId == ShoppingCartId);
+
+
+            if (cartItem != null)
+            {
+                if (cartItem.Amount > 1)
+                {
+                    cartItem.Amount--;
+                }
+                else
+                {
+                    _context.ShoppingCartItems.Remove(cartItem);
+                }
+            }
+
+            await _context.SaveChangesAsync();
+        }
+
         public List<CartItem> GetShoppingCartItems()
         {
             return ShoppingCartItems ?? (ShoppingCartItems = _context.ShoppingCartItems
