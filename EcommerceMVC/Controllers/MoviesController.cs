@@ -1,5 +1,6 @@
 ﻿using EcommerceMVC.Data;
 using EcommerceMVC.Data.Interface_Services;
+using EcommerceMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -47,6 +48,25 @@ namespace EcommerceMVC.Controllers
             ViewBag.Actors = new SelectList(dropdownsData.Actors, "Id", "FullName");
 
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(MovieViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                var dropdownsData = await _service.GetDropdownValues();
+
+                ViewBag.Cinemas = new SelectList(dropdownsData.Cinemas, "Id", "Name");
+                ViewBag.Producers = new SelectList(dropdownsData.Producers, "Id", "FullName");
+                ViewBag.Actors = new SelectList(dropdownsData.Actors, "Id", "FullName");
+
+                return View(model);
+            }
+
+            await _service.AddNewMovieAsync(model);
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }

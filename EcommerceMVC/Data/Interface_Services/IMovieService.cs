@@ -9,5 +9,6 @@ namespace EcommerceMVC.Data.Interface_Services
     {
         Task<Movie> GetMovieById(int id);
         Task<MovieDropdownsViewModel> GetDropdownValues();
+        Task AddNewMovieAsync(MovieViewModel model);
     }
 }

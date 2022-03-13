@@ -17,6 +17,39 @@ namespace EcommerceMVC.Data.Services
             _context = context;
         }
 
+        public async Task AddNewMovieAsync(MovieViewModel model)
+        {
+            var newMovie = new Movie()
+            {
+                Title = model.Title,
+                Description = model.Description,
+                Price = model.Price,
+                ImageURL = model.ImageURL,
+                CinemaId = model.CinemaId,
+                StartDate = model.StartDate,
+                EndDate = model.EndDate,
+                Category = model.Category,
+                ProducerId = model.ProducerId
+            };
+
+            await _context.Movies.AddAsync(newMovie);
+            await _context.SaveChangesAsync();
+
+            //Add Actors
+            foreach (var actor in model.ActorsId)
+            {
+                var actorMovie = new Actor_Movie()
+                {
+                    MovieID = newMovie.Id,
+                    ActorID = actor
+                };
+
+                await _context.Actors_Movies.AddAsync(actorMovie);
+            }
+
+            await _context.SaveChangesAsync();
+        }
+
         public async Task<MovieDropdownsViewModel> GetDropdownValues()
         {
             var response = new MovieDropdownsViewModel()
