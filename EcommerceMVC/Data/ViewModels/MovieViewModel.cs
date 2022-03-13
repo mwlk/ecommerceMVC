@@ -10,43 +10,44 @@ namespace EcommerceMVC.Models
     {
 
         [Required(ErrorMessage = "Title is Required")]
-        [Display(Description = "Movie Title")]
+        [Display(Name = "Movie Title")]
         public string Title { get; set; }
 
         [Required(ErrorMessage = "Movie Description is Required")]
-        [Display(Description = "Movie Description")]
+        [Display(Name = "Movie Description" +
+            "")]
         public string Description { get; set; }
 
         [Required(ErrorMessage = "Price is Required")]
-        [Display(Description = "Movie Price")]
+        [Display(Name = "Movie Price")]
         public double Price { get; set; }
 
         [Required(ErrorMessage = "Poster is Required")]
-        [Display(Description = "Movie Poster")]
+        [Display(Name = "Movie Poster")]
         public string ImageURL { get; set; }
 
         [Required(ErrorMessage = "Start Date is Required")]
-        [Display(Description = "Movie Start")]
+        [Display(Name = "Movie Start")]
         public DateTime StartDate { get; set; }
 
         [Required(ErrorMessage = "End Date is Required")]
-        [Display(Description = "Movie End")]
+        [Display(Name = "Movie End")]
         public DateTime EndDate { get; set; }
 
         [Required(ErrorMessage = "Category is Required")]
-        [Display(Description = "Movie Category")]
+        [Display(Name = "Movie Category")]
         public MovieCategory Category { get; set; }
 
         [Required(ErrorMessage = "Actors is Required")]
-        [Display(Description = "Select Actor(s)")]
+        [Display(Name = "Select Actor(s)")]
         public List<int> ActorsId { get; set; }
 
         [Required(ErrorMessage = "Cinema is Required")]
-        [Display(Description = "Movie Cinema")]
+        [Display(Name = "Movie Cinema")]
         public int CinemaId { get; set; }
 
         [Required(ErrorMessage = "Producer is Required")]
-        [Display(Description = "Movie Producer")]
+        [Display(Name = "Movie Producer")]
         public int ProducerId { get; set; }
 
 
