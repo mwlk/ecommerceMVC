@@ -35,5 +35,13 @@ namespace EcommerceMVC.Controllers
 
             return View(detail);
         }
+
+        public IActionResult Create()
+        {
+            ViewData["Welcome"] = "Welcome to our system";
+            ViewBag.Description = "Movies Shop";
+
+            return View();
+        }
     }
 }
