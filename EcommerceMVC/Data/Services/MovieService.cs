@@ -72,5 +72,45 @@ namespace EcommerceMVC.Data.Services
 
             return detail;
         }
+
+        public async Task UpdateMovieAsync(MovieViewModel model)
+        {
+            var movie = await _context.Movies.FirstOrDefaultAsync(m => m.Id == model.Id);
+
+            if (movie != null)
+            {
+
+                movie.Title = model.Title;
+                movie.Description = model.Description;
+                movie.Price = model.Price;
+                movie.ImageURL = model.ImageURL;
+                movie.CinemaId = model.CinemaId;
+                movie.StartDate = model.StartDate;
+                movie.EndDate = model.EndDate;
+                movie.Category = model.Category;
+                movie.ProducerId = model.ProducerId;
+
+                await _context.SaveChangesAsync();
+            }
+
+            var existingActors = await _context.Actors_Movies.Where(a => a.MovieID == model.Id).ToListAsync();
+            _context.Actors_Movies.RemoveRange(existingActors);
+            await _context.SaveChangesAsync();
+
+
+            //Add Actors
+            foreach (var actor in model.ActorsId)
+            {
+                var actorMovie = new Actor_Movie()
+                {
+                    MovieID = model.Id,
+                    ActorID = actor
+                };
+
+                await _context.Actors_Movies.AddAsync(actorMovie);
+            }
+
+            await _context.SaveChangesAsync();
+        }
     }
 }

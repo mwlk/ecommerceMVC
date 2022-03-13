@@ -7,7 +7,7 @@ namespace EcommerceMVC.Models
 {
     public class MovieViewModel
     {
-
+        public int Id { get; set; }
         [Required(ErrorMessage = "Title is Required")]
         [Display(Name = "Movie Title")]
         public string Title { get; set; }

@@ -68,5 +68,53 @@ namespace EcommerceMVC.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
+
+        public async Task<IActionResult> Edit(int id)
+        {
+            var detail = await _service.GetMovieById(id);
+            if (detail == null) return View("NotFound");
+
+            var response = new MovieViewModel()
+            {
+                Id = detail.Id,
+                Title = detail.Description,
+                Price = detail.Price,
+                ImageURL = detail.ImageURL,
+                Category = detail.Category,
+                CinemaId = detail.CinemaId,
+                ProducerId = detail.ProducerId,
+                ActorsId = detail.Actors_Movies.Select(a => a.ActorID).ToList()
+            };
+
+            var dropdownsData = await _service.GetDropdownValues();
+
+            ViewBag.Cinemas = new SelectList(dropdownsData.Cinemas, "Id", "Name");
+            ViewBag.Producers = new SelectList(dropdownsData.Producers, "Id", "FullName");
+            ViewBag.Actors = new SelectList(dropdownsData.Actors, "Id", "FullName");
+
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, MovieViewModel model)
+        {
+            if (id != model.Id) return View("NotFound");
+
+            if (!ModelState.IsValid)
+            {
+                var dropdownsData = await _service.GetDropdownValues();
+
+                ViewBag.Cinemas = new SelectList(dropdownsData.Cinemas, "Id", "Name");
+                ViewBag.Producers = new SelectList(dropdownsData.Producers, "Id", "FullName");
+                ViewBag.Actors = new SelectList(dropdownsData.Actors, "Id", "FullName");
+
+                return View(model);
+            }
+
+            await _service.UpdateMovieAsync(model);
+
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

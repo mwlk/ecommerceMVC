@@ -5844,11 +5844,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mirko.MIRKO\\source\\repos\\ecommerceMVC\\EcommerceMVC\\EcommerceMVC.csproj",
+      "projectUniqueName": "C:\\Users\\mirko.MIRKO\\source\\repos\\EcommerceMVC\\EcommerceMVC\\EcommerceMVC.csproj",
       "projectName": "EcommerceMVC",
-      "projectPath": "C:\\Users\\mirko.MIRKO\\source\\repos\\ecommerceMVC\\EcommerceMVC\\EcommerceMVC.csproj",
+      "projectPath": "C:\\Users\\mirko.MIRKO\\source\\repos\\EcommerceMVC\\EcommerceMVC\\EcommerceMVC.csproj",
       "packagesPath": "C:\\Users\\mirko.MIRKO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mirko.MIRKO\\source\\repos\\ecommerceMVC\\EcommerceMVC\\obj\\",
+      "outputPath": "C:\\Users\\mirko.MIRKO\\source\\repos\\EcommerceMVC\\EcommerceMVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5917,7 +5917,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   }
