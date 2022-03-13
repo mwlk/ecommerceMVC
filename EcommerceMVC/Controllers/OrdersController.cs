@@ -5,12 +5,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EcommerceMVC.Controllers
 {
-    public class OrdersController1 : Controller
+    public class OrdersController : Controller
     {
         private readonly IMovieService _service;
         private readonly ShoppingCart _cart;
 
-        public OrdersController1(IMovieService service, ShoppingCart cart)
+        public OrdersController(IMovieService service, ShoppingCart cart)
         {
             _service = service;
             _cart = cart;
