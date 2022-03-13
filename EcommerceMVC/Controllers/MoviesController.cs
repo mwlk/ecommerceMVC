@@ -21,14 +21,24 @@ namespace EcommerceMVC.Controllers
 
         public async Task<IActionResult> Index()
         {
-            //var movies = await _context.Movies
-            //                    .Include(c => c.Cinema)
-            //                    .OrderByDescending(m => m.StartDate).ThenByDescending(m => m.Price)
-            //                    .ToListAsync();
-
             var movies = await _service.GetAllAsync(m => m.Cinema);
 
             return View(movies);
+        }
+
+        public async Task<IActionResult> Search(string searchString)
+        {
+            var movies = await _service.GetAllAsync(m => m.Cinema);
+
+            if(!string.IsNullOrEmpty(searchString))
+            {
+                var filtered = movies.Where(m => m.Title.Contains(searchString) || m.Description.Contains(searchString))
+                    .ToList();
+
+                return View("Index", filtered);
+            }
+
+            return View("Index", movies);
         }
 
         public async Task<IActionResult> Detail(int id)

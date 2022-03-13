@@ -36,6 +36,10 @@ namespace EcommerceMVC.Data
         public DbSet<Producer> Producers { get; set; }
 
 
+        //Orders Tables
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
+
 
 
     }
