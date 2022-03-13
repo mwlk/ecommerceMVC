@@ -1,7 +1,9 @@
 ﻿using EcommerceMVC.Data.Base;
 using EcommerceMVC.Data.Interface_Services;
+using EcommerceMVC.Data.ViewModels;
 using EcommerceMVC.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace EcommerceMVC.Data.Services
@@ -13,6 +15,18 @@ namespace EcommerceMVC.Data.Services
         public MovieService(AppDbContext context) : base(context)
         {
             _context = context;
+        }
+
+        public async Task<MovieDropdownsViewModel> GetDropdownValues()
+        {
+            var response = new MovieDropdownsViewModel()
+            {
+                Actors = await _context.Actors.OrderBy(a => a.FullName).ToListAsync(),
+                Cinemas = await _context.Cinemas.OrderBy(c => c.Name).ToListAsync(),
+                Producers = await _context.Producers.OrderBy(p => p.FullName).ToListAsync(),
+            };
+
+            return response;
         }
 
         public async Task<Movie> GetMovieById(int id)

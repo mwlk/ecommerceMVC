@@ -1,4 +1,5 @@
 ﻿@model MovieViewModel
+@using EcommerceMVC.Data;
 
 @{
     ViewData["Title"] = "Create a New Movie";
@@ -50,25 +51,25 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label asp-for="CinemaId" class="control-label"></label>
-                                <select asp-for="CinemaId" class="form-control"></select>
+                                <select asp-for="CinemaId" asp-items="ViewBag.Cinemas" class="form-control"></select>
                                 <span asp-validation-for="CinemaId" class="text-danger"></span>
                             </div>
 
                             <div class="form-group">
                                 <label asp-for="Category" class="control-label"></label>
-                                <select asp-for="Category" class="form-control"></select>
+                                <select asp-for="Category" class="form-control" asp-items="Html.GetEnumSelectList<MovieCategory>()"></select>
                                 <span asp-validation-for="Category" class="text-danger"></span>
                             </div>
 
                             <div class="form-group">
                                 <label asp-for="ProducerId" class="control-label"></label>
-                                <select asp-for="ProducerId" class="form-control"></select>
+                                <select asp-for="ProducerId" asp-items="ViewBag.Producers" class="form-control"></select>
                                 <span asp-validation-for="ProducerId" class="text-danger"></span>
                             </div>
 
                             <div class="form-group">
                                 <label asp-for="ActorsId" class="control-label"></label>
-                                <select asp-for="ActorsId" class="form-control" multiple></select>
+                                <select asp-for="ActorsId" asp-items="ViewBag.Actors" class="form-control" multiple></select>
                                 <span asp-validation-for="ActorsId" class="text-danger"></span>
                             </div>
                         </div>
@@ -97,10 +98,10 @@
 
 @section Scripts{
     <script>
-        $("ImageURL").on("change", function () {
+        $("#ImageURL").on("change", function () {
             var output = document.getElementById("ImagePreview");
 
             output.src = $(this).val();
         })
     </script>
- }
+}

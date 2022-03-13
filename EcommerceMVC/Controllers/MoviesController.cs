@@ -1,6 +1,7 @@
 ﻿using EcommerceMVC.Data;
 using EcommerceMVC.Data.Interface_Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
@@ -36,10 +37,14 @@ namespace EcommerceMVC.Controllers
             return View(detail);
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            ViewData["Welcome"] = "Welcome to our system";
-            ViewBag.Description = "Movies Shop";
+
+            var dropdownsData = await _service.GetDropdownValues();
+
+            ViewBag.Cinemas = new SelectList(dropdownsData.Cinemas, "Id", "Name");
+            ViewBag.Producers = new SelectList(dropdownsData.Producers, "Id", "FullName");
+            ViewBag.Actors = new SelectList(dropdownsData.Actors, "Id", "FullName");
 
             return View();
         }
