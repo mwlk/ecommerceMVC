@@ -78,8 +78,11 @@ namespace EcommerceMVC.Controllers
             var response = new MovieViewModel()
             {
                 Id = detail.Id,
-                Title = detail.Description,
+                Title = detail.Title,
+                Description = detail.Description,
                 Price = detail.Price,
+                StartDate = detail.StartDate,
+                EndDate = detail.EndDate,
                 ImageURL = detail.ImageURL,
                 Category = detail.Category,
                 CinemaId = detail.CinemaId,
@@ -93,7 +96,7 @@ namespace EcommerceMVC.Controllers
             ViewBag.Producers = new SelectList(dropdownsData.Producers, "Id", "FullName");
             ViewBag.Actors = new SelectList(dropdownsData.Actors, "Id", "FullName");
 
-            return View();
+            return View(response);
         }
 
         [HttpPost]
