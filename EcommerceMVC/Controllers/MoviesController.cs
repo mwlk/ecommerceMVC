@@ -43,7 +43,7 @@ namespace EcommerceMVC.Controllers
 
         public async Task<IActionResult> Detail(int id)
         {
-            var detail = await _service.GetMovieById(id);
+            var detail = await _service.GetMovieByIdAsync(id);
 
             return View(detail);
         }
@@ -82,7 +82,7 @@ namespace EcommerceMVC.Controllers
 
         public async Task<IActionResult> Edit(int id)
         {
-            var detail = await _service.GetMovieById(id);
+            var detail = await _service.GetMovieByIdAsync(id);
             if (detail == null) return View("NotFound");
 
             var response = new MovieViewModel()

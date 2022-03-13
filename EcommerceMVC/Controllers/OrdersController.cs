@@ -2,6 +2,7 @@
 using EcommerceMVC.Data.Interface_Services;
 using EcommerceMVC.Data.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace EcommerceMVC.Controllers
 {
@@ -16,7 +17,7 @@ namespace EcommerceMVC.Controllers
             _cart = cart;
         }
 
-        public IActionResult Index()
+        public IActionResult ShoppingCart()
         {
             var items = _cart.GetShoppingCartItems();
 
@@ -29,6 +30,18 @@ namespace EcommerceMVC.Controllers
             };
 
             return View(response);
+        }
+
+        public async Task<RedirectToActionResult> AddToShoppingCart(int id)
+        {
+            var movie = await _service.GetMovieByIdAsync(id);
+
+            if (movie != null)
+            {
+                await _cart.AddItemToCart(movie);
+            }
+
+            return RedirectToAction(nameof(ShoppingCart));
         }
     }
 }

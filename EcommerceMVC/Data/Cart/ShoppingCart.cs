@@ -1,7 +1,11 @@
 ﻿using EcommerceMVC.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace EcommerceMVC.Data.Cart
 {
@@ -17,7 +21,23 @@ namespace EcommerceMVC.Data.Cart
             _context = context;
         }
 
-        public async void AddItemToCart(Movie item)
+        public static ShoppingCart GetShoppingCart(IServiceProvider services)
+        {
+            ISession session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
+
+            var context = services.GetService<AppDbContext>();
+
+            string cartId = session.GetString("CartId") ?? Guid.NewGuid().ToString();
+
+            session.SetString("CartId", cartId);
+
+            return new ShoppingCart(context)
+            {
+                ShoppingCartId = cartId
+            };
+        }
+
+        public async Task AddItemToCart(Movie item)
         {
             var cartItem = _context.ShoppingCartItems.FirstOrDefault(i => i.Movie.Id == item.Id
                                                                      && i.ShoppingCartId == ShoppingCartId);
@@ -31,7 +51,7 @@ namespace EcommerceMVC.Data.Cart
                     Amount = 1
                 };
 
-                _context.ShoppingCartItems.Add(cartItem);
+                await _context.ShoppingCartItems.AddAsync(cartItem);
             }
             else
             {

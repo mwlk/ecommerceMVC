@@ -62,7 +62,7 @@ namespace EcommerceMVC.Data.Services
             return response;
         }
 
-        public async Task<Movie> GetMovieById(int id)
+        public async Task<Movie> GetMovieByIdAsync(int id)
         {
             var detail = await _context.Movies
                                               .Include(c => c.Cinema)

@@ -7,7 +7,7 @@ namespace EcommerceMVC.Data.Interface_Services
 {
     public interface IMovieService : IEntityBaseRepository<Movie>
     {
-        Task<Movie> GetMovieById(int id);
+        Task<Movie> GetMovieByIdAsync(int id);
         Task<MovieDropdownsViewModel> GetDropdownValues();
         Task AddNewMovieAsync(MovieViewModel model);
         Task UpdateMovieAsync(MovieViewModel model);
