@@ -93,3 +93,4 @@ C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\Raz
 C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Orders\ShoppingCart.cshtml.g.cs
 C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\EcommerceMVC.csproj.AssemblyReference.cache
 C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Shared\Components\ShoppingCartSummary\Default.cshtml.g.cs
+C:\Users\mirko.MIRKO\source\repos\EcommerceMVC\EcommerceMVC\obj\Debug\net5.0\Razor\Views\Orders\OrderCompleted.cshtml.g.cs

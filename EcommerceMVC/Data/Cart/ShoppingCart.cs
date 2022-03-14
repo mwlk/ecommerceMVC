@@ -93,7 +93,14 @@ namespace EcommerceMVC.Data.Cart
         public double GetShoppingCartTotal() => _context.ShoppingCartItems.Where(i => i.ShoppingCartId == ShoppingCartId)
                         .Select(i => i.Movie.Price * i.Amount).Sum();
 
+        public async Task ClearShoppingCartAsync()
+        {
+            var items = await _context.ShoppingCartItems.Where(i => i.ShoppingCartId == ShoppingCartId).ToListAsync();
 
+            _context.ShoppingCartItems.RemoveRange(items);
+
+            await _context.SaveChangesAsync();
+        }
 
     }
 }
