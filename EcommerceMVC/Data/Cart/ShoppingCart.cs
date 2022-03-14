@@ -61,7 +61,7 @@ namespace EcommerceMVC.Data.Cart
             await _context.SaveChangesAsync();
         }
 
-        public async void RemoveItemToCart(Movie item)
+        public async Task RemoveItemToCart(Movie item)
         {
             var cartItem = _context.ShoppingCartItems.FirstOrDefault(i => i.Movie.Id == item.Id
                                                                     && i.ShoppingCartId == ShoppingCartId);

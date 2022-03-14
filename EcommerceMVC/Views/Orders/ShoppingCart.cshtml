@@ -33,7 +33,7 @@
                         <td class="align-middle">@item.Movie.Price.ToString("c") </td>
                         <td class="align-middle">@((item.Movie.Price*item.Amount).ToString("c"))</td>
                         <td class="align-middle">
-                            <a class="text-danger" asp-controller="Orders" asp-action="RemoveItemToCart" asp-route-id="@item.Movie.Id">
+                            <a class="text-danger" asp-controller="Orders" asp-action="RemoveToShoppingCart" asp-route-id="@item.Movie.Id">
                                 <i class="bi bi-cart-dash"></i>
                             </a>
                             |

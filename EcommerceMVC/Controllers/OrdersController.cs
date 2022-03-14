@@ -32,13 +32,25 @@ namespace EcommerceMVC.Controllers
             return View(response);
         }
 
-        public async Task<RedirectToActionResult> AddToShoppingCart(int id)
+        public async Task<IActionResult> AddToShoppingCart(int id)
         {
             var movie = await _service.GetMovieByIdAsync(id);
 
             if (movie != null)
             {
                 await _cart.AddItemToCart(movie);
+            }
+
+            return RedirectToAction(nameof(ShoppingCart));
+        }
+
+        public async Task<IActionResult> RemoveToShoppingCart(int id)
+        {
+            var movie = await _service.GetMovieByIdAsync(id);
+
+            if (movie != null)
+            {
+                await _cart.RemoveItemToCart(movie);
             }
 
             return RedirectToAction(nameof(ShoppingCart));
