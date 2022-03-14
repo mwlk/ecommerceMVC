@@ -32,6 +32,7 @@ namespace EcommerceMVC
             services.AddScoped<ICinemaService, CinemaService>();
             services.AddScoped<IMovieService, MovieService>();
             services.AddScoped<IProducerService, ProducerService>();
+            services.AddScoped<IOrderService, OrderService>();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped(sc => ShoppingCart.GetShoppingCart(sc));
